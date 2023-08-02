@@ -1,0 +1,278 @@
+/* Estilos generales */
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  animation: fadeIn 0.5s ease-in-out; /* Animación de difusión al recargar */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0; /* Comenzar con opacidad 0 */
+  }
+  to {
+    opacity: 1; /* Terminar con opacidad 1 */
+  }
+}
+
+/* Estilos para el encabezado */
+header {
+  background-color: #000;
+  color: #fff;
+  padding: 1rem;
+}
+
+nav {
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+/* Estilos para la sección hero */
+section.hero {
+  height: 300px;
+  background-image: url('/otros/SPLIT-1.png'); /* Reemplaza 'background.jpg' con la ruta de tu imagen */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+  color: #fff;
+  position: relative;
+  z-index: 1;
+}
+
+/* Efecto de difuminado (blur) */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+/* Estilos para los botones */
+.btn {
+  display: inline-block;
+  background-color: #000;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #333;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #000;
+  color: #fff;
+}
+
+/* Estilos para la sección de jugadores */
+.players-section {
+  padding: 50px 0;
+  text-align: center;
+}
+
+.players-section h2 {
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+.player {
+  margin-bottom: 20px;
+}
+
+.player img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+/* Estilo para el texto que aparecerá encima del cuadro negro */
+.black-box {
+  position: relative;
+  display: inline-block;
+  padding: 10px;
+  background-color: black;
+  color: white;
+}
+
+.black-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.8; /* Ajusta la opacidad según lo desees */
+  z-index: -1;
+}
+
+/* Estilos para la sección "Acerca de Nosotros" en inicio.html */
+section.about-section {
+  padding: 50px 0;
+  text-align: center;
+}
+
+section.about-section h2 {
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+/* Estilos para la sección de torneos */
+.tournament-section {
+  padding: 50px 0;
+  text-align: center;
+}
+
+.tournament-section h2 {
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+.tournament-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center; /* Alineamos el contenido al centro */
+  position: relative;
+}
+
+.tournament-content p {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.tournament-content a {
+  display: inline-block;
+  margin-top: 20px;
+  background-color: #000;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+}
+
+.tournament-content a:hover {
+  background-color: #333;
+}
+/* Estilos para el formulario de contacto */
+.contact-section {
+  padding: 50px 0;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button.btn {
+  display: inline-block;
+  background-color: #333;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 18px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  border: 1px solid #fff;
+}
+
+button.btn:hover {
+  background-color: #444;
+  transform: scale(1.1); /* Ampliar el botón al pasar el cursor */
+}
+/* Estilos para los botones de redes sociales, Discord y Gmail */
+.contact-buttons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.contact-buttons a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #333;
+  margin: 10px;
+  padding: 10px;
+  border: 2px solid #333;
+  border-radius: 8px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.contact-buttons a img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 10px;
+}
+
+.contact-buttons a p {
+  font-size: 16px;
+}
+
+.contact-buttons a:hover {
+  background-color: #333;
+  color: #fff;
+  transform: scale(1.05);
+}
